@@ -21,6 +21,8 @@
 --ff-main: 'Outfit', sans-serif;
 }
 
+/* GENERAL STYLES */
+
 *,
 *::before,
 *::after {
@@ -32,6 +34,9 @@
 body {
   background: var(--clr-neutral-blue-900);
   font-family: var(--ff-main);
+}
+
+main {
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -40,22 +45,23 @@ body {
 .card {
   background: var(--clr-neutral-blue-800);
   border-radius: 18px;
-  width: 90%;
-  max-width: 21rem;
+  box-shadow: 0 20px 0 20px hsl(217, 54%, 10.1%);
   padding: 1.5rem;
   position: relative;
+  width: 90%;
+  max-width: 21rem;
 }
 
-.card::before {
+.card::after {
   content: "";
-  background: hsla(217, 53%, 7%, .175);
+  background: hsl(215,57%,10%, .4);
   border-radius: 50px;
   display: block;
   position: absolute;
-  z-index: -1;
-  width: 23rem;
-  height: 102%;
-  top: 2rem;
+  z-index: -2;
+  width: 28rem;
+  height: 120%;
+  top: -2rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -99,15 +105,25 @@ body {
 
 /* CARD CONTENT */
 
-.card-title {
+.card-title a,
+.card-title a:active {
   color: var(--clr-neutral-white);
+  cursor: pointer;
+  display: block;
   font-size: 1.3rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.card-title a:hover {
+  color: var(--clr-primary-cyan);
 }
 
 .card-text {
   color: var(--clr-primary-blue);
+  font-size: clamp(1rem,1.5vw,1.1rem);
   font-weight: 300;
   line-height: 1.6;
 }
@@ -148,7 +164,6 @@ hr {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-bottom: .5rem;
 }
 
 .card-footer img {
@@ -164,6 +179,7 @@ hr {
 .name,
 .name:active {
   color: var(--clr-neutral-white);
+  cursor: pointer;
   text-decoration: none;
   transition: all .2s ease-in;
 }
