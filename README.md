@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](screenshots/nft-card-desktop-view.png)
 
 
 ### Links
 
-[Live site URL](https://your-solution-url.com)
+[Live site URL](https://fluffykas.github.io/nft-preview-card/)
 
 ## My process
 
